@@ -30,7 +30,8 @@ a:focus {
 #kc-page-title {
   font-family: 'League Spartan', sans-serif !important;
   color: #fff;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+  margin: 1rem 0;
 }
 
 .kc-logo-text {
@@ -75,6 +76,11 @@ a:focus {
 
 #kc-login:hover {
   background: #e6613e;
+}
+
+#kc-login[disabled] {
+  background: #b6482b !important;
+  color: #b9b9b9;
 }
 
 .kc-logo-text {
@@ -176,4 +182,37 @@ a:focus {
   font-size: 1rem;
   line-height: 1.2em;
   color: #d1d1d1;
+}
+
+@media (max-width: 769px) {
+  .login-pf-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #kc-info {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  #kc-info-wrapper {
+    width: 114%;
+    margin: 20px -7% -30px -7%;
+    padding: 1rem;
+  }
+
+  .kc-logo-text {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .login-pf-header {
+    margin: 0 !important;
+    padding: 1rem 0 0 0 !important;
+  }
+
+  #kc-page-title {
+    font-size: 1.25rem !important;
+  }
 }
