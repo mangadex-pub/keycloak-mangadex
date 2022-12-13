@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build
-        run: mvn clean package
+        run: mvn clean package -Drevision="$GITHUB_REF_NAME"
 
       - name: Release
         uses: softprops/action-gh-release@v1
