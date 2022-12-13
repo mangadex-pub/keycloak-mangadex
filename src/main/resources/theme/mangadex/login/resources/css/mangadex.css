@@ -1,3 +1,168 @@
 body {
-    background: #191a1c !important;
+  background: #191a1c !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  background: #121318 !important;
+}
+
+a {
+  font-family: 'League Spartan', sans-serif !important;
+  color: #ff6740 !important;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #e6613e !important;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+#kc-header-wrapper {
+  padding: 1.5rem 0;
+}
+
+#kc-page-title {
+  font-family: 'League Spartan', sans-serif !important;
+  color: #fff;
+  font-weight: 500 !important;
+}
+
+.kc-logo-text {
+  background: url('https://mangadex.org/favicon.svg') center !important;
+  background-repeat: no-repeat !important;
+}
+
+.card-pf {
+  background: #212328;
+  border-color: #ff6740;
+}
+
+.form-group label {
+  font-family: 'League Spartan', sans-serif !important;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input {
+  background: #3d414a;
+  border: none;
+  border-radius: 4px;
+  outline: solid 2px transparent;
+  color: #fff;
+  font-family: 'League Spartan', sans-serif !important;
+
+  transition: outline 0.2s ease-out;
+}
+
+.form-group input:focus {
+  outline: solid 2px #bc553b;
+}
+
+#kc-login {
+  background: #ff6740;
+  font-family: 'League Spartan', sans-serif !important;
+  font-weight: 600;
+  font-size: 1rem;
+
+  transition: background 0.1s ease-out;
+}
+
+#kc-login:hover {
+  background: #e6613e;
+}
+
+.kc-logo-text {
+  display: flex !important;
+  justify-content: center !important;
+  background: none !important;
+  position: relative !important;
+}
+
+#md-logo {
+  display: block;
+  height: 100%;
+  width: 4rem;
+  background: url('https://mangadex.org/favicon.svg') center;
+  background-repeat: no-repeat;
+}
+
+#md-wordmark {
+  margin: auto 0.5rem;
+  display: inline-block;
+  font-family: 'League Spartan', sans-serif !important;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1rem !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-align: center;
+  color: #eeeeee;
+}
+
+#kc-info-wrapper {
+  background: #2e2f37;
+  font-family: 'League Spartan', sans-serif !important;
+  color: #b2b2b2;
+  line-height: 1.3em;
+  font-size: 1rem;
+}
+
+#rememberMe {
+  accent-color: #ff6740 !important;
+  outline: none;
+}
+
+#rememberMe label {
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+.checkbox label {
+  user-select: none;
+}
+
+#kc-form-buttons input {
+  background: #ff6740;
+  font-family: 'League Spartan', sans-serif !important;
+  font-weight: 600;
+  font-size: 1rem;
+
+  transition: background 0.1s ease-out;
+}
+
+#kc-form-buttons input:hover {
+  background: #e6613e;
+}
+
+.pf-c-form-control[aria-invalid='true'] {
+  background: #6c3c3c;
+}
+
+.required {
+  color: #ff5e42;
+  font-family: 'League Spartan', sans-serif !important;
+  font-size: 1rem;
+}
+
+#kc-error-message p {
+  font-family: 'League Spartan', sans-serif !important;
+  color: #9b9b9b !important;
+  line-height: 1.3em;
+  font-size: 1rem;
+}
+
+.alert-success {
+  background: #203020;
+  font-family: 'League Spartan', sans-serif !important;
+}
+
+.alert-success > span {
+  font-size: 1rem;
+  line-height: 1.2em;
+  color: #d1d1d1;
 }
