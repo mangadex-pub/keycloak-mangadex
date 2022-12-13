@@ -24,7 +24,12 @@ a:focus {
 }
 
 #kc-header-wrapper {
-  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+  padding: 0;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #kc-page-title {
@@ -37,6 +42,7 @@ a:focus {
 .kc-logo-text {
   background: url('https://mangadex.org/favicon.svg') center !important;
   background-repeat: no-repeat !important;
+  height: 100%;
 }
 
 .card-pf {
