@@ -44,6 +44,10 @@ services:
       - ./src/main/resources/theme/mangadex:/opt/keycloak/themes/mangadex:ro
     environment:
       JAVA_OPTS: "-XX:+UseShenandoahGC -Xms512m -Xmx512m"
+      KC_DB: "postgres"
+      KC_HEALTH_ENABLED: "true"
+      KC_METRICS_ENABLED: "true"
+      KC_FEATURES: "declarative-user-profile"
       KEYCLOAK_ADMIN: "admin"
       KEYCLOAK_ADMIN_PASSWORD: "password"
     networks:
