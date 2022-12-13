@@ -21,7 +21,7 @@ services:
 
   keycloak:
     container_name: keycloak
-    image: ghcr.io/mangadex-pub/keycloak-pgsql:1.0.1-kc20.0.1-pgsql
+    image: ghcr.io/mangadex-pub/keycloak-pgsql:1.0.2-kc20.0.1-vanilla
     depends_on:
       - keycloak-pgsql
     entrypoint: [ "/opt/keycloak/bin/kc.sh", "start-dev" ]
