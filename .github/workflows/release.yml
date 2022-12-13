@@ -50,7 +50,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: |
             latest=false
-            suffix=-kc${{ env.KEYCLOAK_VERSION }}-${{ matrix.tag_suffix }}
+            suffix=-${{ matrix.tag_suffix }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
@@ -63,4 +63,4 @@ jobs:
           build-args: |
             JDK_VERSION=${{ env.JDK_VERSION }}
             KEYCLOAK_VERSION=${{ env.KEYCLOAK_VERSION }}
-            PROVIDER_VERSION=${{ env.GITHUB_REF_NAME }}
+            PROVIDER_VERSION=${{ github.ref_name }}
