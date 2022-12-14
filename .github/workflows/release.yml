@@ -68,7 +68,7 @@ jobs:
           name: keycloak-mangadex-user
           path: providers/user/target/keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
 
-  build:keycloak:
+  build-keycloak:
     needs: [ "build-provider-theme", "build-provider-user" ]
     runs-on: ubuntu-latest
     permissions:
