@@ -12,7 +12,7 @@ env:
   KEYCLOAK_VERSION: "1.0.4-kc20.0.2"
 
 jobs:
-  build:provider:theme:
+  build-provider-theme:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,7 +40,7 @@ jobs:
           name: keycloak-mangadex-theme
           path: providers/theme/target/keycloak-mangadex-theme-${{ github.ref_name }}.jar
 
-  build:provider:user:
+  build-provider-user:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -69,7 +69,7 @@ jobs:
           path: providers/user/target/keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
 
   build:keycloak:
-    needs: [ "build:provider:theme", "build:provider:user" ]
+    needs: [ "build-provider-theme", "build-provider-user" ]
     runs-on: ubuntu-latest
     permissions:
       contents: read
