@@ -37,7 +37,7 @@ jobs:
       - name: Archive theme provider jarfile
         uses: actions/upload-artifact@v3
         with:
-          name: keycloak-mangadex-theme
+          name: keycloak-mangadex-theme-${{ github.ref_name }}.jar
           path: providers/theme/target/keycloak-mangadex-theme-${{ github.ref_name }}.jar
 
   build-provider-user:
@@ -65,7 +65,7 @@ jobs:
       - name: Archive theme provider jarfile
         uses: actions/upload-artifact@v3
         with:
-          name: keycloak-mangadex-user
+          name: keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
           path: providers/user/target/keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
 
   build-keycloak:
@@ -90,11 +90,14 @@ jobs:
       - name: Download theme provider
         uses: actions/download-artifact@v3
         with:
-          name: keycloak-mangadex-theme
+          name: keycloak-mangadex-theme-${{ github.ref_name }}.jar
+          path: providers/theme/target/keycloak-mangadex-theme-${{ github.ref_name }}.jar
+
       - name: Download user provider
         uses: actions/download-artifact@v3
         with:
-          name: keycloak-mangadex-user
+          name: keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
+          path: providers/user/target/keycloak-mangadex-user-provider-${{ github.ref_name }}.jar
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
