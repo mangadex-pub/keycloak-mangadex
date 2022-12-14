@@ -3,16 +3,12 @@ FROM ghcr.io/mangadex-pub/keycloak:${KEYCLOAK_VERSION} as keycloak-mangadex
 
 USER root
 COPY providers/theme/target/keycloak-mangadex-theme-*.jar /opt/keycloak/providers/
-COPY providers/user/target/keycloak-mangadex-user-*.jar /opt/keycloak/providers/
 RUN chmod -v 0644 /opt/keycloak/providers/*.jar
-
 USER 1000
 
 ENV KC_DB=postgres
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
-
-# Comma-separated
 ENV KC_FEATURES="declarative-user-profile"
 
 WORKDIR /opt/keycloak

@@ -21,7 +21,7 @@ services:
 
   keycloak:
     container_name: keycloak
-    image: ghcr.io/mangadex-pub/keycloak:1.0.4-kc20.0.2
+    image: ghcr.io/mangadex-pub/keycloak:1.0.5-kc20.0.2-md2
     depends_on:
       - keycloak-pgsql
     entrypoint: [ "/opt/keycloak/bin/kc.sh", "start-dev" ]
@@ -41,7 +41,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./src/main/resources/theme/mangadex:/opt/keycloak/themes/mangadex:ro
+      - ./providers/theme/src/main/resources/theme/mangadex:/opt/keycloak/themes/mangadex:ro
     environment:
       JAVA_OPTS: "-XX:+UseShenandoahGC -Xms512m -Xmx512m"
       KC_DB: "postgres"
