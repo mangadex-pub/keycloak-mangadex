@@ -1,23 +1,9 @@
-ARG JDK_VERSION="11"
 ARG KEYCLOAK_VERSION="1.0.4-kc20.0.2"
-
-FROM ghcr.io/mangadex-pub/jdk-maven:${JDK_VERSION}-corretto as jdk-base
-FROM ghcr.io/mangadex-pub/keycloak:${KEYCLOAK_VERSION} as keycloak-base
-
-FROM jdk-base AS keycloak-provider-mangadex
+FROM ghcr.io/mangadex-pub/keycloak:${KEYCLOAK_VERSION} as keycloak-mangadex
 
 USER root
-COPY . /tmp/keycloak-provider-mangadex
-WORKDIR /tmp/keycloak-provider-mangadex
-
-ARG PROVIDER_VERSION="local-SNAPSHOT"
-RUN mvn clean package -Drevision=${PROVIDER_VERSION}
-
-FROM keycloak-base AS keycloak-mangadex
-
-USER root
-ARG PROVIDER_VERSION="local-SNAPSHOT"
-COPY --from=keycloak-provider-mangadex /tmp/keycloak-provider-mangadex/target/keycloak-mangadex-${PROVIDER_VERSION}.jar /opt/keycloak/providers/keycloak-mangadex-${PROVIDER_VERSION}.jar
+COPY providers/theme/target/keycloak-mangadex-theme-*.jar /opt/keycloak/providers/
+COPY providers/user/target/keycloak-mangadex-user-*.jar /opt/keycloak/providers/
 RUN chmod -v 0644 /opt/keycloak/providers/*.jar
 
 USER 1000
