@@ -123,12 +123,34 @@ a:focus {
   font-size: 1rem;
 }
 
-#rememberMe {
+input[type='checkbox'] {
   accent-color: #ff6740 !important;
   outline: none;
 }
 
-#rememberMe label {
+input[type='submit'] {
+  background-color: #ff6740 !important;
+  font-family: 'League Spartan', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+
+  transition: background 0.1s ease-out;
+}
+
+input[type='submit']:hover {
+  background-color: #e6613e !important;
+}
+
+button {
+  background-color: #2c2c2c;
+  font-family: 'League Spartan', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+label {
   font-family: 'League Spartan', sans-serif !important;
 }
 
@@ -186,6 +208,90 @@ a:focus {
   font-size: 1rem;
   line-height: 1.2em;
   color: #d1d1d1;
+}
+
+.select-auth-box-parent {
+  font-family: 'League Spartan', sans-serif !important;
+  border-color: #5e606b;
+}
+
+.select-auth-box-parent:hover {
+  background: #2e2f37;
+}
+
+.select-auth-box-headline {
+  color: #ff6740 !important;
+}
+
+.fa {
+  color: #656565 !important;
+}
+
+.select-auth-box-desc {
+  color: #656565 !important;
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+#kc-totp-settings {
+  font-family: 'League Spartan', sans-serif !important;
+  color: #7c7c7c !important;
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+#kc-totp-settings p {
+  color: #d3d3d3 !important;
+}
+
+#kc-try-again {
+  background-color: #ff6740 !important;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  font-family: 'League Spartan', sans-serif !important;
+  font-weight: 600;
+  font-size: 1rem;
+
+  transition: background 0.1s ease-out;
+}
+
+#kc-try-again:hover {
+  background-color: #e6613e !important;
+}
+
+#kc-totp-secret-key {
+  font-family: 'League Spartan', sans-serif !important;
+  background-color: #3d3d3d !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 4px;
+  color: #c7c7c7;
+}
+
+.alert-info {
+  background-color: #3d3d3d !important;
+}
+
+.alert-info span {
+  color: #00c9f5 !important;
+}
+
+.form-group div {
+  color: #e6613e !important;
+}
+
+.alert-warning {
+  background: #36322f !important;
+}
+
+.alert-warning span:not(.fa) {
+  color: #d8a731 !important;
+  font-family: 'League Spartan', sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.3em !important;
+}
+
+.alert-warning span.fa {
+  color: #d8a731 !important;
 }
 
 @media (max-width: 769px) {
