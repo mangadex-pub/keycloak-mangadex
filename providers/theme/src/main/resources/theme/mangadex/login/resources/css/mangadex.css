@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  background: 0% 32px no-repeat
-      url('https://cdn.discordapp.com/attachments/823551635325583360/1053245315978907708/mdex-login-key.png'),
-    #111111 !important;
+  background: 0% 50% no-repeat url('../img/mdex-login-key.png'), #111111 !important;
+  background-size: min(720px, 40%);
+}
+
+@media (max-width: 769px) {
+  body {
+    background: #111111 !important;
+  }
 }
 
 a {
@@ -45,8 +50,22 @@ a:focus {
 }
 
 .card-pf {
+  position: relative;
   background: #212328;
   border-color: #ff6740;
+  border-radius: 4px;
+}
+
+.card-pf::before {
+  pointer-events: none;
+  content: ' ';
+  border-radius: 4px;
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 12px);
+  top: -10px;
+  left: 0;
+  border: solid 6px #111111 !important;
 }
 
 .form-group label {
@@ -357,8 +376,8 @@ label {
   }
 
   #kc-info-wrapper {
-    width: 114%;
-    margin: 20px -7% -30px -7%;
+    width: 107%;
+    margin: 20px -7% -30px -3.5%;
     padding: 1rem;
   }
 
