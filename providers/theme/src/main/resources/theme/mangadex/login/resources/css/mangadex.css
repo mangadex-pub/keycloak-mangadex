@@ -294,6 +294,55 @@ label {
   color: #d8a731 !important;
 }
 
+#kc-webauthn-authenticator {
+  border-color: #ff6740 !important;
+}
+
+.pficon {
+  color: #a3a4bc !important;
+}
+
+#kc-webauthn-authenticator-label {
+  color: #a3a4bc !important;
+}
+
+#kc-webauthn-authenticator-transport {
+  color: #7e7e90 !important;
+}
+
+#kc-webauthn-authenticator-created-label {
+  color: #7e7e90 !important;
+}
+
+#kc-webauthn-authenticator-created {
+  color: #7e7e90 !important;
+}
+
+#continue {
+  color: #dedede !important;
+  background-color: #e6613e !important;
+  border: none !important;
+  background-image: none !important;
+  padding: 0.375rem 0.5rem 0.25rem 0.5rem !important;
+  border-radius: 4px;
+  font-family: 'League Spartan', sans-serif !important;
+  font-weight: 600;
+  font-size: 1rem !important;
+  line-height: 1.3em !important;
+}
+
+#continue:hover {
+  background-color: #bc553b !important;
+}
+
+#kc-content-wrapper p {
+  color: #deefef !important;
+}
+
+#kc-content-wrapper li {
+  color: #adb5b5 !important;
+}
+
 @media (max-width: 769px) {
   .login-pf-page {
     width: 90%;
