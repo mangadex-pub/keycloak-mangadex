@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-  background: #121318 !important;
+  background: 0% 32px no-repeat
+      url('https://cdn.discordapp.com/attachments/823551635325583360/1053245315978907708/mdex-login-key.png'),
+    #111111 !important;
 }
 
 a {
