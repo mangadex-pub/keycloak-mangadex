@@ -7,7 +7,7 @@ volumes:
 services:
   keycloak-pgsql:
     container_name: keycloak-pgsql
-    image: docker.io/bitnami/postgresql:14-debian-11
+    image: docker.io/bitnami/postgresql:15-debian-11
     volumes:
       - keycloak-pgsql:/bitnami/postgresql
     ports:
@@ -21,7 +21,7 @@ services:
 
   keycloak:
     container_name: keycloak
-    image: ghcr.io/mangadex-pub/keycloak:1.0.5-kc20.0.2-md2
+    image: ghcr.io/mangadex-pub/keycloak:1.0.6-kc20.0.5-md2
     depends_on:
       - keycloak-pgsql
     entrypoint: [ "/opt/keycloak/bin/kc.sh", "start-dev" ]
@@ -47,7 +47,7 @@ services:
       KC_DB: "postgres"
       KC_HEALTH_ENABLED: "true"
       KC_METRICS_ENABLED: "true"
-      KC_FEATURES: "declarative-user-profile"
+      KC_FEATURES: "declarative-user-profile,update-email"
       KEYCLOAK_ADMIN: "admin"
       KEYCLOAK_ADMIN_PASSWORD: "password"
     networks:

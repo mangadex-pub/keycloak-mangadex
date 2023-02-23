@@ -1,4 +1,4 @@
-ARG KEYCLOAK_VERSION="1.0.5-kc20.0.2-md2"
+ARG KEYCLOAK_VERSION="1.0.6-kc20.0.5-md2"
 FROM ghcr.io/mangadex-pub/keycloak:${KEYCLOAK_VERSION} as keycloak-mangadex
 
 USER root
@@ -9,7 +9,7 @@ USER 1000
 ENV KC_DB=postgres
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
-ENV KC_FEATURES="declarative-user-profile"
+ENV KC_FEATURES="declarative-user-profile,update-email"
 
 WORKDIR /opt/keycloak
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--optimized"]
