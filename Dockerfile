@@ -1,4 +1,4 @@
-ARG KEYCLOAK_VERSION="1.0.6-kc20.0.5-md2"
+ARG KEYCLOAK_VERSION="1.1.0-kc21.0.0-md1"
 FROM ghcr.io/mangadex-pub/keycloak:${KEYCLOAK_VERSION} as keycloak-mangadex
 
 USER root

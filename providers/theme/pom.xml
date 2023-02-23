@@ -12,8 +12,8 @@
   <properties>
     <revision>local-SNAPSHOT</revision>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>11</java.version>
-    <keycloak.version>20.0.5</keycloak.version>
+    <java.version>17</java.version>
+    <keycloak.version>21.0.0</keycloak.version>
   </properties>
 
   <build>
