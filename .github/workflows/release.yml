@@ -9,7 +9,7 @@ env:
   REGISTRY: "ghcr.io"
   IMAGE_NAME: "${{ github.repository }}"
   JDK_VERSION: "17"
-  KEYCLOAK_VERSION: "1.1.0-kc21.0.0-md1"
+  KEYCLOAK_VERSION: "1.2.0-kc21.1.1"
 
 jobs:
   build-provider-theme:
