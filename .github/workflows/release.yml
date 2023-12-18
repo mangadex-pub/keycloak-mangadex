@@ -35,7 +35,7 @@ jobs:
       - name: Build theme provider
         run: mvn -f providers/theme/pom.xml clean package -Drevision=${GITHUB_REF_NAME}
       - name: Archive theme provider jarfile
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: keycloak-mangadex-theme-${{ github.ref_name }}.jar
           path: providers/theme/target/keycloak-mangadex-theme-${{ github.ref_name }}.jar
